@@ -1,0 +1,60 @@
+{
+  "kind": "collectionType",
+  "collectionName": "posts",
+  "info": {
+    "singularName": "post",
+    "pluralName": "posts",
+    "displayName": "Post",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "postDescription": {
+      "type": "richtext",
+      "required": true,
+      "maxLength": 100
+    },
+    "coverPhoto": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images",
+        "files",
+        "videos",
+        "audios"
+      ]
+    },
+    "post": {
+      "type": "component",
+      "repeatable": true,
+      "component": "test-data.test"
+    },
+    "category": {
+      "type": "enumeration",
+      "enum": [
+        "Electronics",
+        "Toys & Sport",
+        "Books & Publishing",
+        "Food & Beverages",
+        "Home & Garden"
+      ],
+      "required": false
+    },
+    "specialCategory": {
+      "type": "enumeration",
+      "enum": [
+        "Highlight",
+        "Recommendations",
+        "Selected"
+      ]
+    }
+  }
+}
